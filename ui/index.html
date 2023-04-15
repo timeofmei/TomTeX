@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+    <script id="MathJax-script" async src="assets/tex-svg.js"></script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="titlebar">
+        <div class="titlebar-button" id="titlebar-github">
+          <img src="assets/github.svg" alt="github" />
+        </div>
+        <div data-tauri-drag-region id="space"></div>
+        <div class="titlebar-button" id="titlebar-pin">
+          <img src="assets/pin-outline.svg" alt="pin" />
+        </div>
+        <div class="titlebar-button" id="titlebar-minimize">
+          <img src="assets/minimize.svg" alt="minimize" />
+        </div>
+        <div class="titlebar-button" id="titlebar-close">
+          <img src="assets/close.svg" alt="close" />
+        </div>
+      </div>
+      <h1 id="title">TomTeX</h1>
+      <p id="author">@timeofmei</p>
+      <div id="input-box">
+        <div id="dollar-sign">$</div>
+        <textarea autofocus id="input" rows="4"></textarea>
+        <div id="dollar-sign">$</div>
+      </div>
+      <div id="output" />
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

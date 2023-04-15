@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+
+body {
+  margin: 0
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#titlebar {
+  height: 30px;
+  background: #329ea3;
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.titlebar-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.titlebar-button:hover {
+  background: #5bbec3;
+}
+
+#space {
+  width: calc(100% - 3*30px);
+}
+
+#title {
+  margin: 0;
+  margin-top: 30px;
+}
+
+#author {
+  margin: 0;
+}
+
+#input-box {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#dollar-sign {
+  display: flex;
+  width: 5%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#input {
+  width: 90%;
+  font-family: monospace;
+  font-size: 1.2em;
+}
