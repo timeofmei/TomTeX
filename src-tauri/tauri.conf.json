@@ -1,5 +1,4 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
     "beforeBuildCommand": "",
     "beforeDevCommand": "",
@@ -52,6 +51,9 @@
       "shortDescription": "",
       "targets": "all",
       "windows": {
+        "webviewInstallMode": {
+          "type": "embedBootstrapper"
+        },
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
         "timestampUrl": ""

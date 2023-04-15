@@ -1,9 +1,11 @@
-use tauri::Menu;
+#![cfg_attr(
+    all(not(debug_assertions), target_os = "windows"),
+    windows_subsystem = "windows"
+)]
 
 fn main() {
-    let menu = Menu::new();
     tauri::Builder::default()
-        .menu(menu)
+        .menu(tauri::Menu::new())
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
