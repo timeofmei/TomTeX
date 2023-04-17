@@ -13,7 +13,7 @@ elementID("titlebar-github").addEventListener("click", async () => {
 
 elementID("titlebar-config").addEventListener("click", () => {
   new tauri.window.WebviewWindow("config", {
-    url: "config/config.html",
+    url: "config.html",
     decorations: false,
     alwaysOnTop: false,
     fullscreen: false,
