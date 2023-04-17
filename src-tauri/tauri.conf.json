@@ -17,6 +17,7 @@
         "open": true
       },
       "window": {
+        "create": true,
         "close": true,
         "hide": true,
         "show": true,
@@ -67,6 +68,7 @@
     },
     "windows": [
       {
+        "label": "main",
         "decorations": false,
         "alwaysOnTop": false,
         "fullscreen": false,

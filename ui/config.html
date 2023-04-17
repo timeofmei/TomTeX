@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="share.css" />
+    <link rel="stylesheet" href="config.css" />
+  </head>
+  <body class="no-margin">
+    <div class="page">
+      <div class="titlebar">
+        <div data-tauri-drag-region id="space"></div>
+        <div class="titlebar-button" id="titlebar-close">
+          <img src="assets/close.svg" alt="close" />
+        </div>
+      </div>
+      <form id="form">
+        <div class="form-item">
+          <label>background color</label>
+          <input type="color" id="bg-color" value="#ffffff" />
+        </div>
+        <div class="form-item">
+          <label>text color</label>
+          <input type="color" id="text-color"/>
+        </div>
+        <div class="form-item">
+          <label>transparency</label>
+          <input type="range" id="transparency" style="display: none" />
+          <div>coming soon</div>
+        </div>
+      </form>
+    </div>
+    <script src="share.js"></script>
+    <script src="config.js"></script>
+  </body>
+</html>

@@ -1,9 +1,3 @@
-const elementID = (id) => {
-  return document.getElementById(id);
-};
-
-const tauri = window.__TAURI__;
-
 MathJax = {
   options: {
     enableMenu: false,
@@ -15,6 +9,19 @@ MathJax = {
 
 elementID("titlebar-github").addEventListener("click", async () => {
   await tauri.shell.open("https://github.com/timeofmei/TomTeX");
+});
+
+elementID("titlebar-config").addEventListener("click", () => {
+  new tauri.window.WebviewWindow("config", {
+    url: "config/config.html",
+    decorations: false,
+    alwaysOnTop: false,
+    fullscreen: false,
+    height: 150,
+    width: 300,
+    resizable: false,
+    title: "config",
+  });
 });
 
 let alwaysOnTop = false;
@@ -30,10 +37,6 @@ elementID("titlebar-minimize").addEventListener("click", () => {
   tauri.window.appWindow.minimize();
 });
 
-elementID("titlebar-close").addEventListener("click", () => {
-  tauri.window.appWindow.close();
-});
-
 elementID("input").addEventListener("input", (event) => {
   const input = event.target.value.trim();
   let output = elementID("output");
@@ -44,4 +47,17 @@ elementID("input").addEventListener("input", (event) => {
     MathJax.startup.document.clear();
     MathJax.startup.document.updateDocument();
   });
+});
+
+elementID("titlebar-close").addEventListener("click", () => {
+  tauri.window.WebviewWindow.getByLabel("main").close();
+});
+
+tauri.event.listen("bg-color", (event) => {
+  elementID("page").style.backgroundColor = event.payload.color;
+});
+
+tauri.event.listen("text-color", (event) => {
+  elementID("page").style.color = event.payload.color;
+  elementID("input").style.color = event.payload.color;
 });

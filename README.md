@@ -28,7 +28,7 @@ See the [releases](https://github.com/timeofmei/TomTeX/releases) page.
 
 ## TODO
 
-- [ ] Preferences page
-- [ ] Background color
-- [ ] Text color
+- [x] Preferences page
+- [x] Background color
+- [x] Text color
 - [ ] Window transparency
