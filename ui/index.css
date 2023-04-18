@@ -1,5 +1,5 @@
 #space {
-  width: calc(100% - 5*30px);
+  width: calc(100% - 5 * 30px);
 }
 
 #input-box {
