@@ -50,6 +50,7 @@ elementID("input").addEventListener("input", (event) => {
 });
 
 elementID("titlebar-close").addEventListener("click", () => {
+  tauri.window.WebviewWindow.getByLabel("config")?.close();
   tauri.window.WebviewWindow.getByLabel("main").close();
 });
 
