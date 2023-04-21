@@ -27,9 +27,7 @@ elementID("titlebar-config").addEventListener("click", () => {
 let alwaysOnTop = false;
 elementID("titlebar-pin").addEventListener("click", () => {
   alwaysOnTop = !alwaysOnTop;
-  elementID("titlebar-pin").children[0].src = `assets/pin${
-    alwaysOnTop ? "" : "-outline"
-  }.svg`;
+  elementID("titlebar-pin").children[0].src = `assets/pin${alwaysOnTop ? "" : "-outline"}.svg`;
   tauri.window.appWindow.setAlwaysOnTop(alwaysOnTop);
 });
 
